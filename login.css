@@ -1,0 +1,32 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+.container{
+         .navbar{
+            background-color: black;
+            color: white;
+
+         display: flex;
+         height: 80px;
+         border-bottom: 2px solid black;
+         justify-content: space-between;
+         align-items: center;
+         .logo{
+
+             font-size: 30px;
+             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+             font-weight: bold;
+         }
+         .elements{
+             display: flex;
+             gap: 80px;
+             a{
+                 text-decoration: none;
+                 color: white;
+                 font-size: 20px;
+             }
+         }
+    }
+}
