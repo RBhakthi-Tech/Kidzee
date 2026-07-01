@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kids Admission Portal</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #e3f2fd;
+            margin: 0;
+        }
+
+        .navbar {
+            background: black;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .elements a {
+            color: white;
+            text-decoration: none;
+            margin-left: 30px;
+            font-size: 18px;
+        }
+
+        .elements a:hover {
+            color: yellow;
+        }
+
+        .container {
+            width: 400px;
+            margin: 40px auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+        }
+
+        h2 {
+            text-align: center;
+            color: #1565c0;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0 15px;
+            border-radius: 5px;
+            border: 1px solid gray;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #218838;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <div class="logo">Kidzee</div>
+
+        <div class="elements">
+            <a href="Home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="login.html">Login</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <h2>Kids Admission Form</h2>
+
+        <form onsubmit="saveData(); return false;">
+
+            <label>First Name</label>
+            <input type="text" id="fname" required>
+
+            <label>Last Name</label>
+            <input type="text" id="lname" required>
+
+            <label>Date of Birth</label>
+            <input type="date" id="dob" required>
+
+            <label>Date of Joining</label>
+            <input type="date" id="doj" required>
+
+            <label>Mother Name</label>
+            <input type="text" id="mother" required>
+
+            <label>Father Name</label>
+            <input type="text" id="father" required>
+
+            <button type="submit">Submit</button>
+
+        </form>
+
+    </div>
+
+    <script>
+        function saveData() {
+
+            localStorage.setItem("fname", document.getElementById("fname").value);
+            localStorage.setItem("lname", document.getElementById("lname").value);
+            localStorage.setItem("dob", document.getElementById("dob").value);
+            localStorage.setItem("doj", document.getElementById("doj").value);
+            localStorage.setItem("mother", document.getElementById("mother").value);
+            localStorage.setItem("father", document.getElementById("father").value);
+
+            window.location.href = "details.html";
+        }
+    </script>
+
+</body>
+
+</html>
