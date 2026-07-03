@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admission Details</title>
+</head>
+<body>
+
+<h2>Student Details</h2>
+
+<p><b>First Name:</b> <span id="fname"></span></p>
+<p><b>Last Name:</b> <span id="lname"></span></p>
+<p><b>Date of Birth:</b> <span id="dob"></span></p>
+<p><b>Date of Joining:</b> <span id="doj"></span></p>
+<p><b>Mother Name:</b> <span id="mother"></span></p>
+<p><b>Father Name:</b> <span id="father"></span></p>
+
+<script>
+document.getElementById("fname").innerHTML = localStorage.getItem("fname");
+document.getElementById("lname").innerHTML = localStorage.getItem("lname");
+document.getElementById("dob").innerHTML = localStorage.getItem("dob");
+document.getElementById("doj").innerHTML = localStorage.getItem("doj");
+document.getElementById("mother").innerHTML = localStorage.getItem("mother");
+document.getElementById("father").innerHTML = localStorage.getItem("father");
+</script>
+
+</body>
+</html>
